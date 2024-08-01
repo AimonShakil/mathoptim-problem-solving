@@ -1,21 +1,5 @@
 //Selection Construct / Conditional or Decision making construct
 
-// Write a Code which gives grades to students according to thier scores
-import { input, number} from "@inquirer/prompts";
-let marks = await number ({message : "Please enter your marks"})
-let marks_Inp = Number(marks)
-
-if (marks_Inp >= 80 && marks_Inp <= 100 ) {
-    console.log( ` Congrats!! You have scored Grade : A+ `)
-} else if (marks_Inp >= 70 && marks_Inp <= 79 ) {
-    console.log( ` Congrats!! You have scored Grade : A `)
-} else if (marks_Inp >= 60 && marks_Inp <= 69 ) {
-    console.log( ` Congrats!! You have scored Grade : B `)
-} else if (marks_Inp >= 40 && marks_Inp <= 59 ) {
-    console.log( ` Congrats!! You have scored Grade : C `)
-} else 
-    console.log( ` You are Failed `)
-
 
 // Online purchsing 
 
