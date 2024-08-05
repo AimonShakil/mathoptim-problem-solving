@@ -133,6 +133,27 @@ let countries = ["pk" ,"CN", "IN" ,"US"]
             }       
         } 
     }
+
+    var cleanestCities = ["Karachi", "Lahore", "Islamabad", "Peshawar"];
+
+    for (var i = 0; i <= 4; i++) {
+      if ("Islamabad" === cleanestCities[i]) {
+        console.log("It's one of the cleanest cities");
+        break;
+      }
+    }
+    
+    //
+    let rNo = 0;
+    for (let x = 0 ; x < 5; x++) {
+        rNo = Math.random () * 10;
+        if (rNo > 5) {
+            console.log(`${rNo} is greater than 5`);
+        } else {
+            console.log(`${rNo} is lesser than 5`);
+            
+        }
+    }
  
  
 // did understand logic
@@ -147,6 +168,176 @@ for (let x = 0; x < countries_new.length ; x ++) {
         console.log(`${countries_new[x]} -> un-check`); 
     }    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Problem Statement: Calculating Factorial
+Description:
+Create a program that calculates the factorial of a given number. The factorial of a non-negative integer n, /n
+denoted as n!, is the product of all positive integers less than or equal to n. */
+
+/* 1. Basic Information Gathering:
+Create a program that uses inquirer to prompt the user for their name, age, and favorite color. Display the collected /n 
+information at the end. */
+
+ /* 2. Temperature Converter:
+Build a program that asks the user to enter a temperature in Celsius. Use inquirer to gather input and then convert the /n 
+temperature to Fahrenheit, displaying the result. */
+
+/*3. Guess the Number:
+Implement a number guessing game. Generate a random number between 1 and 100, then prompt the user to guess the number /n 
+using inquirer. Provide feedback if the guess is too high, too low, or correct. */
+
+/*4. Shopping List:
+Develop a simple shopping list application. Use inquirer to repeatedly prompt the user to add items to their shopping list/n
+.Display the final list when the user decides to exit. */ 
+
+/* 5. Calculator:
+Create a basic calculator program. Use inquirer to prompt the user for two numbers and an operation / n 
+(addition, subtraction, multiplication, division). Perform the calculation and display the result. */ 
+
+/* 6. Task Manager:
+Build a task manager that allows the user to add, view, and delete tasks. Use inquirer to prompt the user for actions /n
+and display the task list. */ 
+
+
+/*7. Palindrome Checker:
+Implement a program that checks if a given word is a palindrome (reads the same backward as forward). Prompt the user/n
+ to enter a word and display whether it's a palindrome or not. */
+
+/* 8. Color Picker:
+Develop a program that prompts the user to choose a color from a predefined list. Display a message based on their / n 
+selection. */ 
+
+/* 9. BMI Calculator:
+Build a BMI (Body Mass Index) calculator. Use inquirer to gather the user's height and weight, then calculate and /n 
+display the BMI. */ 
+
+/* 10. Rock, Paper, Scissors Game:
+Create a simple rock, paper, scissors game. Prompt the user to choose one of the options, generate a random choice for/ n
+the computer, and determine the winner. */
+
+
+
+
+
+// // Q2 : Create a game where we start with any random game number. Ask the user to keep guessing the game number until user /n
+// //enters correct value
+// import inquirer from "inquirer";
+// async function game() {
+//     let gameNum = await inquirer. prompt ([
+//     {
+//         name : "numG",
+//         type : "number",
+//         message : "Please enter & Guess any random number",
+//     },
+// ]);
+// let numGame : number = 6;       
+// let userGuess = Number(gameNum.numG);
+// while (numGame !== userGuess) { // may not use == use single so no need to convert
+//     console.log( `Sorry, thats not the correct number please try again! `);
+//     gameNum = await inquirer.prompt([
+//     {
+//         name: "numG",
+//         type: "number",
+//         message: "Please enter & Guess any random number",
+//     },
+// ]);
+//     userGuess = Number(gameNum.numG); // Update the user's guess
+// }
+// console.log("Congratulations! You guessed the correct number.");
+// console.log("Please start your Ludo game");
+// }
+// game();
+// // if (gameNum == 6) {
+// //     
+// // } else {
+// // }
+// // let v: number = 1;
+// // do {
+// //     console.log("Count is: " + i);
+// //     i++;
+// // } while (i <= 5);
+// // // This do-while loop will print the count starting from 1 to 5. Even if i is initially greater than 5, the loop executes at least once before evaluating the condition. The loop continues executing the block of code as long as i is less than or equal to 5.
+// // while (true) {
+// //     console.log("This is an infinite loop!");
+// // }
+// // // 4. Condition Controlled Loop - Infinite Loop
+// // while (true) {
+// //     console.log("This is an infinite loop!");
+// // }
+// // for (;;) {
+// //     console.log("This is an Gouda loop!");
+// // }
+// // // Infinite loop with break condition
+// // let i1: number = 0;
+// // while (true) {
+// //     console.log("Loop iteration: " + i1);
+// //     i++;
+// //     if (i1 >= 10) {
+// //         break; // Exit the loop when i is greater than or equal to 10
+// //     }
+// // }
+// // //Although this example appears to be an infinite loop initially, it has an internal break condition that stops the loop when i becomes greater than or equal to 10
+// // //Recursive Functon
+// // function infiniteLoop() {
+// //     console.log("This is an infinite loop!");
+// //     infiniteLoop(); // Calls itself infinitely
+// // }
+// // // Invoke the function to start the infinite loop
+// // infiniteLoop();
+// // // n this example, the function infiniteLoop continuously calls itself, creating an infinite recursion.
+// // //Session 3
+// // // loop has three parts starting point, condition and increment
+// // let countries = ["Afghanistan", "Pakistan", "Iran"]; // here countires is array type object
+// // let x = 0;
+// // /*for (;  x < countries.length; x++) {
+// //     console.log(countries[x].length); // here if we put a value in array it only prints and check thts i, we are putty x to check all and index value changes as well
+// //     for (let y= 0; y<countries[x].length;y++){
+// //         if (countries[x].charAt(y) =="a" || countries[x].charAt(y)=="A")  
+// //         console.log("*");
+// //         else
+// //         console.log(countries[x].charAt(y));
+// //         /*console.log(countries[x].charAt(y));
+// //     }
+// // }
+// // /*console.log("Pakistan".toLowerCase());
+// // console.log("Pakistan".toUpperCase()); */ // upper condition can be made better with these two methods
+// // //Simple loop example
+// // for (x = 0;  x < countries.length; x++) /*{
+// //    /* if (countries[x].length > 5) {
+// //         console.log (`${countries[x]} Length=${countries[x].length}->Check`);
+// //     }else {
+// //         console.log (`${countries[x]} -> un-Check`);
+// //     }
+// //     }*/
+// //     if (countries.includes("Pakistan")) {
+// //         console.log("Pakistan Zindabad");
+// //     }
+// // /* for (x=1; x<5; x++){ // x++ is a counter means whenever check, this is a post operator add value after bracket
+// //     console.log(x);
+// // }
+// // // we can also use loop in reverse as below
+// // x=10;
+// // for(; x> 0; x++){
+// //     console.log(x);
+// // } 
+// // // never ending loop
+// // for (;true;x++) {
+// // };
+// //  // it has three parameters 1st variable, 2nd of testing, and third incrementing, we will find different ways of usinf it
+// // */ 
 
 
 

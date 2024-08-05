@@ -204,25 +204,3 @@ switch (a1) {
 
 
 /* +++++++++++++++++++++++++ */
-
-// shift to iteration later
-var cleanestCities = ["Karachi", "Lahore", "Islamabad", "Peshawar"];
-
-for (var i = 0; i <= 4; i++) {
-  if ("Islamabad" === cleanestCities[i]) {
-    console.log("It's one of the cleanest cities");
-    break;
-  }
-}
-
-//
-let rNo = 0;
-for (let x = 0 ; x < 5; x++) {
-    rNo = Math.random () * 10;
-    if (rNo > 5) {
-        console.log(`${rNo} is greater than 5`);
-    } else {
-        console.log(`${rNo} is lesser than 5`);
-        
-    }
-}
