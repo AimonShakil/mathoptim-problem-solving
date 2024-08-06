@@ -1,3 +1,4 @@
+import { input, number } from "@inquirer/prompts";
 //Break and continue in Iterations
 for (let i = 0; i <= 10; i++) {
     if (i == 5) {
@@ -107,6 +108,24 @@ for (let x = 0; x < countries.length; x++) {
         }
     }
 }
+var cleanestCities = ["Karachi", "Lahore", "Islamabad", "Peshawar"];
+for (var i = 0; i <= 4; i++) {
+    if ("Islamabad" === cleanestCities[i]) {
+        console.log("It's one of the cleanest cities");
+        break;
+    }
+}
+//
+let rNo = 0;
+for (let x = 0; x < 5; x++) {
+    rNo = Math.random() * 10;
+    if (rNo > 5) {
+        console.log(`${rNo} is greater than 5`);
+    }
+    else {
+        console.log(`${rNo} is lesser than 5`);
+    }
+}
 // did understand logic
 let countries_new = ["pk", "CN", "IN", "US"];
 for (let x = 0; x < countries_new.length; x++) {
@@ -120,9 +139,117 @@ for (let x = 0; x < countries_new.length; x++) {
         console.log(`${countries_new[x]} -> un-check`);
     }
 }
-// loop in reverse as below
-let x1 = 10;
-for (; x1 > 0; x1++) {
-    console.log(x1);
+/* This code uses a ternary operator to conditionally assign a value to yourName. Then, it checks if yourName is
+truthy before attempting to call toUpperCase() on it, ensuring type safety within the if block.
+yourName.toUpperCase();//Error: Object is possibly 'undefined'. */
+let yourName = Math.random() > 0.6 ? "Anna" : undefined;
+if (yourName === "string") {
+    yourName.charAt(2);
 }
-export {};
+if (yourName === "Anna") {
+    yourName.length;
+}
+if (yourName == " ") {
+    yourName.toUpperCase();
+}
+yourName?.toUpperCase();
+/*Problem Statement: Calculating Factorial
+Create a program that calculates the factorial of a given number. The factorial of a non-negative integer n, /n
+denoted as n!, is the product of all positive integers less than or equal to n. */
+function factorialIterative(n) {
+    if (n < 0) {
+        throw new Error("Factorial is not defined for negative numbers.");
+    }
+    let result = 1;
+    for (let i = 1; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+// Example usage
+let num_fac = 55;
+try {
+    console.log(`Factorial of ${num_fac} (Iterative): ${factorialIterative(num_fac)}`);
+}
+catch (error) {
+    console.error(error.message);
+}
+/* 1. Basic Information Gathering:
+Create a program that uses inquirer to prompt the user for their name, age, and favorite color. Display the collected /n
+information at the end. */
+let u_name = await input({ message: "pls Input User Name" });
+let u_age = await number({ message: "Enter your age number" });
+let u_color = await input({ message: "Enter your fav color" });
+console.log(`User name is ${u_name}, age is ${u_age} and fav color is ${u_color}`);
+/* 2. Temperature Converter:
+Build a program that asks the user to enter a temperature in Celsius. Use inquirer to gather input and then convert the /n
+temperature to Fahrenheit, displaying the result. */
+let temp = await number({ message: "pls insert temp in celsius" });
+/*3. Guess the Number_2:
+Implement a number guessing game. Generate a random number between 1 and 100, then prompt the user to guess the number /n
+using inquirer. Provide feedback if the guess is too high, too low, or correct. */
+/*4. Shopping List:
+Develop a simple shopping list application. Use inquirer to repeatedly prompt the user to add items to their
+shopping list Display the final list when the user decides to exit. */
+async function runShoppingListApp() {
+    const shoppingList = [];
+    let continueadding = true;
+    console.log('Welcome to Shopping List Application!');
+    while (continueadding) {
+        // prompt user to enter an item or exit
+        let answer = await input({ message: "Enter an item to add to your shopping list (or type 'exit' to finish):" });
+        const item = answer.trim();
+        // check if user wan to exit 
+        if (item.toLocaleLowerCase() === "exit") {
+            continueadding = false;
+        }
+        else {
+            // add items to shopping list
+            shoppingList.push(item);
+            console.log(`Added : ${item}`);
+        }
+    }
+    // Display the final shopping list
+    console.log(" \n  Your shopping List :");
+    shoppingList.forEach((item, index) => {
+        console.log(`${index + 1}. ${item}`);
+    });
+    console.log(" Thankyou for using shopping List Application!");
+}
+// Run the Application
+runShoppingListApp().catch((error) => {
+    console.error("An error occured: ", error);
+});
+runShoppingListApp();
+/*2. Card Game Suit:
+Define a type for a playing card suit with the values "hearts," "diamonds," "clubs," or "spades." Write a function /n
+that accepts a card suit and performs some action based on the suit.*/
+/*3. Days of the Week:
+Create a type for the days of the week using union literals. Write a function that takes a day as input and prints a/n
+ message indicating whether it's a weekday or a weekend day. */
+/*4. Coin Toss Simulation:
+Define a type for the outcomes of a coin toss: "heads" or "tails." Write a function that simulates a coin toss and /n
+prints the result. */
+/*5. Media Player Controls:
+Create a type for media player controls with the values "play," "pause," "stop," or "rewind." Write a function that
+takes a control command and performs the corresponding action. */
+/*6. Temperature Scale Conversion:
+Define a type for temperature scales: "celsius" or "fahrenheit." Write a function that converts a temperature from
+one scale to another based on user input. */
+/* 7. Shape Recognition:
+Create a type for geometric shapes: "circle," "square," "triangle," or "rectangle." Write a function that takes a
+shape and calculates its area or perimeter based on the shape type. */
+/*8. Season Detector:
+Define a type for seasons: "spring," "summer," "fall," or "winter." Write a function that determines the season based /n
+on the current month. */
+/* 9. Menu Navigation:
+Create a type for menu options: "home," "settings," "profile," or "logout." Write a function that navigates to the /n
+selected menu option. */
+/*10. Fruit Basket:
+bash
+Copy code
+Define a type for fruits: "apple," "banana," "orange," or "grape." Write a function that categorizes fruits into /n
+different baskets based on their type.*/
+//Functions
+/* Create a game where we start with any random game number. Ask the user to keep guessing the game number until user /n
+enters correct value , Recursion */
