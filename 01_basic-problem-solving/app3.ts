@@ -63,6 +63,16 @@ for (let i = 1; i <= 100 ;  i ++) {
 }
 console.log(`Total is ${sums}`);
 
+//++++++++++++++++++++++ simple examples of Iteration
+
+
+
+
+
+
+
+
+
 
 
 
@@ -233,6 +243,87 @@ let temp = await number ({message : "pls insert temp in celsius"})
 
 
 
+//Union Literals related:
+/* 1. Traffic Light Simulation:
+Define a type for a traffic light that can only have the values "red," "yellow," or "green." Write a function that
+simulates the behavior of a traffic light by cycling through these colors. */
+
+ function t_light (light: true) {
+    type signs_col = 'red' | 'Yellow' |'green';
+    let signals: signs_col = 'red'
+   
+    while (light) {
+        if (signals == 'red'){
+            console.log(`its red light pls stop`);   
+        } else if ( signals == 'Yellow') {
+            console.log(`its Yellow light pls gear up`);    
+        } else if ( signals == 'green') {
+            console.log(`its Green light pls go!`);  
+        }
+        else {
+            console.log('pls follow warden')
+        }
+        light = ++
+    }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*2. Card Game Suit:
+ Define a type for a playing card suit with the values "hearts," "diamonds," "clubs," or "spades." Write a function /n 
+ that accepts a card suit and performs some action based on the suit.*/
+ 
+ /*3. Days of the Week:
+ Create a type for the days of the week using union literals. Write a function that takes a day as input and prints a/n
+  message indicating whether it's a weekday or a weekend day. */
+ 
+ /*4. Coin Toss Simulation:
+ Define a type for the outcomes of a coin toss: "heads" or "tails." Write a function that simulates a coin toss and /n
+ prints the result. */
+ 
+ /*5. Media Player Controls:
+ Create a type for media player controls with the values "play," "pause," "stop," or "rewind." Write a function that 
+ takes a control command and performs the corresponding action. */
+ 
+ /*6. Temperature Scale Conversion:
+ Define a type for temperature scales: "celsius" or "fahrenheit." Write a function that converts a temperature from 
+ one scale to another based on user input. */
+ 
+ /* 7. Shape Recognition:
+ Create a type for geometric shapes: "circle," "square," "triangle," or "rectangle." Write a function that takes a 
+ shape and calculates its area or perimeter based on the shape type. */
+ 
+ /*8. Season Detector:
+ Define a type for seasons: "spring," "summer," "fall," or "winter." Write a function that determines the season based /n 
+ on the current month. */
+ 
+ /* 9. Menu Navigation:
+ Create a type for menu options: "home," "settings," "profile," or "logout." Write a function that navigates to the /n
+ selected menu option. */
+ 
+ /*10. Fruit Basket:
+ bash
+ Copy code
+ Define a type for fruits: "apple," "banana," "orange," or "grape." Write a function that categorizes fruits into /n
+ different baskets based on their type.*/ 
+ 
+
+//Functions
+/* Create a game where we start with any random game number. Ask the user to keep guessing the game number until user /n
+enters correct value , Recursion */ 
 
 
 /*3. Guess the Number_2:
@@ -301,56 +392,3 @@ display the BMI. */
 /* 10. Rock, Paper, Scissors Game:
 Create a simple rock, paper, scissors game. Prompt the user to choose one of the options, generate a random choice for/ n
 the computer, and determine the winner. */
-
-
-//Union Literals related:
-/* 1. Traffic Light Simulation:
-Define a type for a traffic light that can only have the values "red," "yellow," or "green." Write a function that/n
- simulates the behavior of a traffic light by cycling through these colors. */
-
- type traffic_light = 'red' | 'Yellow' |'green';
-
-
- /*2. Card Game Suit:
- Define a type for a playing card suit with the values "hearts," "diamonds," "clubs," or "spades." Write a function /n 
- that accepts a card suit and performs some action based on the suit.*/
- 
- /*3. Days of the Week:
- Create a type for the days of the week using union literals. Write a function that takes a day as input and prints a/n
-  message indicating whether it's a weekday or a weekend day. */
- 
- /*4. Coin Toss Simulation:
- Define a type for the outcomes of a coin toss: "heads" or "tails." Write a function that simulates a coin toss and /n
- prints the result. */
- 
- /*5. Media Player Controls:
- Create a type for media player controls with the values "play," "pause," "stop," or "rewind." Write a function that 
- takes a control command and performs the corresponding action. */
- 
- /*6. Temperature Scale Conversion:
- Define a type for temperature scales: "celsius" or "fahrenheit." Write a function that converts a temperature from 
- one scale to another based on user input. */
- 
- /* 7. Shape Recognition:
- Create a type for geometric shapes: "circle," "square," "triangle," or "rectangle." Write a function that takes a 
- shape and calculates its area or perimeter based on the shape type. */
- 
- /*8. Season Detector:
- Define a type for seasons: "spring," "summer," "fall," or "winter." Write a function that determines the season based /n 
- on the current month. */
- 
- /* 9. Menu Navigation:
- Create a type for menu options: "home," "settings," "profile," or "logout." Write a function that navigates to the /n
- selected menu option. */
- 
- /*10. Fruit Basket:
- bash
- Copy code
- Define a type for fruits: "apple," "banana," "orange," or "grape." Write a function that categorizes fruits into /n
- different baskets based on their type.*/ 
- 
-
-//Functions
-/* Create a game where we start with any random game number. Ask the user to keep guessing the game number until user /n
-enters correct value , Recursion */ 
-
